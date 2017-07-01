@@ -1,5 +1,7 @@
 # Python Data Structure Syllabus
 
+这部分讲述的主要是Python中的几种数据结构, 字符串string, 文件Files, 数组list, 字典dirctionary, 元组tuple. 在知道Python基本语法，比如选择判断 if else、循环 for i in range(10)之后，再有效学习这几种数据结构，就可以帮助你处理基本上所有常见的问题。比如如果你要提取一个文件中的重要信息，可以先读取文件到一个长字符串中，再通过字符串的类方法（内置函数）提取最重要的信息，然后把信息存到一个数组里面，之后可以再进行后续操作，比如画图或者输出成为文件等等。基本上学习好数据结构这一部分，就可以用Python处理常见的问题了。
+
 ## Week 1
 
 ### Chapter Six: Strings

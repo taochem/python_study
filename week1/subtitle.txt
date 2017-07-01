@@ -1,0 +1,44 @@
+Hello and welcome to yet
+another work exercise from Python for Informatics: Exploring Information. My name is Charles Severance and
+I'm your exercise coach. I'm your personal trainer,
+your personal assistant. Welcome to the software development gym. This material is, of course,
+is copyright creative commons, as is the textbook as well. So, just make sure that when
+you're using these exercises, that you're using them properly. Particularly, if you've taken this
+class and you have an assignment that includes this exercise,
+you probably should try it first. I mean, these exercises are there so that
+you learn the material, and if you if you just take the crutch every time then you
+won't learn to do things on your own. So enough of that lecturing. Other details you can get
+from pythonlearn.com. So today we're contemplating exercise 6.9. Our goal is to write some code to
+parse lines that start with this something blah blah blah blah colon,
+and then we're gonna chop off the second half and we'll convert
+it to a floating point number. In a later chapter we'll
+do this in a loop, but for now we're just going to like hack one line
+and just see what it looks like, okay? And so this one's kind of a silly one,
+but we'll do it anyway. So this one,
+let's grab this string while we're at it, and start up TextWrangler. Oh, the last exercise is still there. Start TextWrangler, and
+start the terminal program. Open terminal program,
+I'll go to my desktop, I'll go to python. Folder and now paste that string in. And I'm just going to call my string X for
+now. And I'll put this in a string. Later you'll be reading this from a file. But this exercise is not to
+read anything from a file. This exercise is just parse that string. So, it's going to be pretty simple. We'll print x just for yucks. We could make it so it'll prompt for
+this string in a loop or something like that but
+we'll leave that for now. We're just going to,
+our job is just hacking and slashing. So, the first thing we're going to do is, we're going to use the find
+function in the string library. Make a variable called position and
+we're gonna say x.find (':'). It's like where is that colon at? Transition. Then we're gonna save
+this guy as spamchop.py. And of course the colors change and we do an ls and here's spamchop.py. So let's say python spamchop.py and
+again there's no input here. Let's run that again python spamchop.py. So there we go. So that basically says that the position
+of this letter is the position 18. So the next thing we're going to do is, we're going to say,
+let's chop off the first part. Print x and
+we're going to use string slicing. pos: which says start a position and
+move to the end. So I'll save that one and I'll run it. That looks pretty close. We got rid of most of it,
+but we still have a colon. So we gotta chop off one after
+the position of the colon. We actually are not
+interested in the colon. So we just add one here and
+then we go spam chop. Now we're gonna see if
+the float cares about this. I don't think so but we'll find out. num = float and
+I'm just gonna say x [pos+1 cuz I can give it an expression here, to the end, and let's see what happens. Print num. So what do you think's gonna happen? Think it's gonna work? Think it's gonna blow up? Think these spaces at the front
+are gonna freak it out? Let's find out. No.
+The spaces don't freak it out. So, we now have a number. And if I did a print of type just to
+be sort of like obsessively compulsive, we could say num, type(num) and so proven to me that I can
+comment these guys out. Don't really need those guys anymore And that is a floating point number. And it's all parsed and it's cool. I mean, it's pretty simple, all right? You go find where this thing is,
+advance one character beyond it. And then slice it out, simple enough. Thanks for your time.

@@ -1,0 +1,380 @@
+WEBVTT
+
+1
+00:00:00.780 --> 00:00:03.862
+Hello and welcome to yet
+another work exercise from Python for
+
+2
+00:00:03.862 --> 00:00:05.942
+Informatics: Exploring Information.
+
+3
+00:00:05.942 --> 00:00:11.280
+My name is Charles Severance and
+I'm your exercise coach.
+
+4
+00:00:11.280 --> 00:00:14.750
+I'm your personal trainer,
+your personal assistant.
+
+5
+00:00:14.750 --> 00:00:17.130
+Welcome to the software development gym.
+
+6
+00:00:18.430 --> 00:00:21.480
+This material is, of course,
+is copyright creative commons,
+
+7
+00:00:21.480 --> 00:00:22.880
+as is the textbook as well.
+
+8
+00:00:24.065 --> 00:00:26.890
+So, just make sure that when
+you're using these exercises,
+
+9
+00:00:26.890 --> 00:00:29.320
+that you're using them properly.
+
+10
+00:00:29.320 --> 00:00:33.981
+Particularly, if you've taken this
+class and you have an assignment
+
+11
+00:00:33.981 --> 00:00:38.330
+that includes this exercise,
+you probably should try it first.
+
+12
+00:00:38.330 --> 00:00:43.290
+I mean, these exercises are there so that
+you learn the material, and if you if you
+
+13
+00:00:43.290 --> 00:00:50.190
+just take the crutch every time then you
+won't learn to do things on your own.
+
+14
+00:00:50.190 --> 00:00:53.107
+So enough of that lecturing.
+
+15
+00:00:53.107 --> 00:00:58.004
+Other details you can get
+from pythonlearn.com.
+
+16
+00:00:59.350 --> 00:01:02.538
+So today we're contemplating exercise 6.9.
+
+17
+00:01:02.538 --> 00:01:07.279
+Our goal is to write some code to
+parse lines that start with this
+
+18
+00:01:07.279 --> 00:01:12.379
+something blah blah blah blah colon,
+and then we're gonna chop off
+
+19
+00:01:12.379 --> 00:01:17.320
+the second half and we'll convert
+it to a floating point number.
+
+20
+00:01:18.340 --> 00:01:22.620
+In a later chapter we'll
+do this in a loop, but for
+
+21
+00:01:22.620 --> 00:01:29.480
+now we're just going to like hack one line
+and just see what it looks like, okay?
+
+22
+00:01:29.480 --> 00:01:34.550
+And so this one's kind of a silly one,
+but we'll do it anyway.
+
+23
+00:01:34.550 --> 00:01:39.830
+So this one,
+let's grab this string while we're at it,
+
+24
+00:01:39.830 --> 00:01:43.420
+and start up TextWrangler.
+
+25
+00:01:43.420 --> 00:01:45.650
+Oh, the last exercise is still there.
+
+26
+00:01:47.410 --> 00:01:52.148
+Start TextWrangler, and
+start the terminal program.
+
+27
+00:01:57.380 --> 00:02:01.326
+Open terminal program,
+I'll go to my desktop, I'll go to python.
+
+28
+00:02:01.326 --> 00:02:06.250
+Folder and
+
+29
+00:02:06.250 --> 00:02:10.093
+now paste that string in.
+
+30
+00:02:10.093 --> 00:02:12.690
+And I'm just going to call my string X for
+now.
+
+31
+00:02:12.690 --> 00:02:15.520
+And I'll put this in a string.
+
+32
+00:02:15.520 --> 00:02:17.170
+Later you'll be reading this from a file.
+
+33
+00:02:17.170 --> 00:02:20.670
+But this exercise is not to
+read anything from a file.
+
+34
+00:02:20.670 --> 00:02:23.130
+This exercise is just parse that string.
+
+35
+00:02:24.440 --> 00:02:27.560
+So, it's going to be pretty simple.
+
+36
+00:02:27.560 --> 00:02:29.043
+We'll print x just for yucks.
+
+37
+00:02:32.194 --> 00:02:35.603
+We could make it so it'll prompt for
+this string in a loop or
+
+38
+00:02:35.603 --> 00:02:38.610
+something like that but
+we'll leave that for now.
+
+39
+00:02:38.610 --> 00:02:41.880
+We're just going to,
+our job is just hacking and slashing.
+
+40
+00:02:41.880 --> 00:02:43.970
+So, the first thing we're going to do is,
+
+41
+00:02:43.970 --> 00:02:47.820
+we're going to use the find
+function in the string library.
+
+42
+00:02:47.820 --> 00:02:53.801
+Make a variable called position and
+we're gonna say x.find (':').
+
+43
+00:02:53.801 --> 00:02:56.265
+It's like where is that colon at?
+
+44
+00:02:56.265 --> 00:02:57.360
+Transition.
+
+45
+00:02:59.210 --> 00:03:04.494
+Then we're gonna save
+this guy as spamchop.py.
+
+46
+00:03:04.494 --> 00:03:08.370
+And of course the colors change and
+
+47
+00:03:08.370 --> 00:03:12.651
+we do an ls and here's spamchop.py.
+
+48
+00:03:12.651 --> 00:03:19.720
+So let's say python spamchop.py and
+again there's no input here.
+
+49
+00:03:19.720 --> 00:03:25.170
+Let's run that again python spamchop.py.
+
+50
+00:03:25.170 --> 00:03:25.670
+So there we go.
+
+51
+00:03:25.670 --> 00:03:32.270
+So that basically says that the position
+of this letter is the position 18.
+
+52
+00:03:32.270 --> 00:03:35.149
+So the next thing we're going to do is,
+
+53
+00:03:35.149 --> 00:03:39.810
+we're going to say,
+let's chop off the first part.
+
+54
+00:03:39.810 --> 00:03:43.910
+Print x and
+we're going to use string slicing.
+
+55
+00:03:43.910 --> 00:03:48.900
+pos: which says start a position and
+move to the end.
+
+56
+00:03:49.990 --> 00:03:53.610
+So I'll save that one and I'll run it.
+
+57
+00:03:53.610 --> 00:03:55.060
+That looks pretty close.
+
+58
+00:03:55.060 --> 00:03:58.330
+We got rid of most of it,
+but we still have a colon.
+
+59
+00:04:00.220 --> 00:04:03.740
+So we gotta chop off one after
+the position of the colon.
+
+60
+00:04:03.740 --> 00:04:06.100
+We actually are not
+interested in the colon.
+
+61
+00:04:06.100 --> 00:04:10.178
+So we just add one here and
+then we go spam chop.
+
+62
+00:04:10.178 --> 00:04:13.394
+Now we're gonna see if
+the float cares about this.
+
+63
+00:04:13.394 --> 00:04:16.158
+I don't think so but we'll find out.
+
+64
+00:04:16.158 --> 00:04:21.309
+num = float and
+I'm just gonna say x [pos+1
+
+65
+00:04:21.309 --> 00:04:25.403
+cuz I can give it an expression here,
+
+66
+00:04:25.403 --> 00:04:30.140
+to the end, and let's see what happens.
+
+67
+00:04:30.140 --> 00:04:30.970
+Print num.
+
+68
+00:04:32.420 --> 00:04:33.480
+So what do you think's gonna happen?
+
+69
+00:04:33.480 --> 00:04:34.530
+Think it's gonna work?
+
+70
+00:04:34.530 --> 00:04:35.380
+Think it's gonna blow up?
+
+71
+00:04:35.380 --> 00:04:38.210
+Think these spaces at the front
+are gonna freak it out?
+
+72
+00:04:39.920 --> 00:04:42.320
+Let's find out.
+
+73
+00:04:42.320 --> 00:04:45.060
+No.
+The spaces don't freak it out.
+
+74
+00:04:45.060 --> 00:04:47.110
+So, we now have a number.
+
+75
+00:04:48.110 --> 00:04:56.051
+And if I did a print of type just to
+be sort of like obsessively compulsive,
+
+76
+00:04:56.051 --> 00:05:00.022
+we could say num, type(num) and so
+
+77
+00:05:00.022 --> 00:05:05.033
+proven to me that I can
+comment these guys out.
+
+78
+00:05:05.033 --> 00:05:07.417
+Don't really need those guys anymore
+
+79
+00:05:12.875 --> 00:05:15.260
+And that is a floating point number.
+
+80
+00:05:15.260 --> 00:05:16.630
+And it's all parsed and it's cool.
+
+81
+00:05:16.630 --> 00:05:18.580
+I mean, it's pretty simple, all right?
+
+82
+00:05:18.580 --> 00:05:21.940
+You go find where this thing is,
+advance one character beyond it.
+
+83
+00:05:21.940 --> 00:05:25.700
+And then slice it out, simple enough.
+
+84
+00:05:25.700 --> 00:05:26.450
+Thanks for your time.

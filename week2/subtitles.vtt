@@ -1,0 +1,287 @@
+WEBVTT
+
+1
+00:00:00.230 --> 00:00:02.850
+What I want to do in this video is
+give you a real short introduction in
+
+2
+00:00:02.850 --> 00:00:05.120
+how to use the Python Playground.
+
+3
+00:00:05.120 --> 00:00:11.170
+Now, we really, really indeed want you to
+install Python and run it on your desktop.
+
+4
+00:00:11.170 --> 00:00:14.970
+And we give you instructions on how to
+do that and videos on how to do that.
+
+5
+00:00:16.000 --> 00:00:19.920
+The idea is eventually,
+especially if you're going to complete
+
+6
+00:00:19.920 --> 00:00:24.260
+the entire specialization, you must run
+the programs on a desktop or laptop or
+
+7
+00:00:24.260 --> 00:00:28.670
+a real computer where you can have files
+and manipulate data and create databases.
+
+8
+00:00:28.670 --> 00:00:33.350
+But it's not essential in the first two
+courses to actually install Python.
+
+9
+00:00:33.350 --> 00:00:37.840
+We provide you a web-based,
+browser-based Python environment.
+
+10
+00:00:37.840 --> 00:00:42.320
+But again, before I show you that,
+I just want to encourage you to go through
+
+11
+00:00:42.320 --> 00:00:47.450
+the installing process, and get it there,
+and it's just gonna save you some time.
+
+12
+00:00:47.450 --> 00:00:49.580
+In Week 2, we have this link.
+
+13
+00:00:49.580 --> 00:00:51.920
+This link will become useful to you.
+
+14
+00:00:51.920 --> 00:00:56.170
+We call it the Python Playground,
+how to develop Python in the browser.
+
+15
+00:00:56.170 --> 00:01:01.220
+And this uses a actual Python compiler
+that compiles code to JavaScript and
+
+16
+00:01:01.220 --> 00:01:05.190
+then runs it in your browser, so
+we're actually not running your code.
+
+17
+00:01:05.190 --> 00:01:06.660
+We're really emulating your code.
+
+18
+00:01:06.660 --> 00:01:14.080
+And this Python environment that we have
+is not a perfect Python environment,
+
+19
+00:01:14.080 --> 00:01:16.370
+and that's why I really want
+you to use the real one.
+
+20
+00:01:16.370 --> 00:01:20.670
+It's really designed as an autograder
+for the very simple Python applications
+
+21
+00:01:20.670 --> 00:01:24.530
+that I assign you in this course.
+But you can play.
+
+22
+00:01:24.530 --> 00:01:27.900
+So some of these buttons you're not going
+to see because you're not the teacher.
+
+23
+00:01:27.900 --> 00:01:33.330
+You'll see the Run Python button and
+the Reset Code button and the Exit button.
+
+24
+00:01:33.330 --> 00:01:36.530
+So this remembers the code
+that you wrote the first time.
+
+25
+00:01:36.530 --> 00:01:38.640
+And depending on what
+assignment you're working on,
+
+26
+00:01:38.640 --> 00:01:41.650
+there is base code that's
+not always correct.
+
+27
+00:01:41.650 --> 00:01:46.300
+In this case, I can reset the code
+to the original that you will see
+
+28
+00:01:46.300 --> 00:01:50.700
+in the Python Playground, and this is it.
+
+29
+00:01:50.700 --> 00:01:53.949
+And it opens a file, and you're very at
+the beginning, so don't worry about this.
+
+30
+00:01:55.030 --> 00:01:57.690
+But there are some files,
+the files I use throughout the book, and
+
+31
+00:01:57.690 --> 00:01:59.330
+they're sitting here
+available to be opened.
+
+32
+00:01:59.330 --> 00:02:03.300
+You can't just open any old file,
+just these three files are available.
+
+33
+00:02:03.300 --> 00:02:05.990
+And then, you hit the
+button and Run Python, and
+
+34
+00:02:05.990 --> 00:02:10.150
+then it runs the Python program, and the
+output of the Python program happens here.
+
+35
+00:02:10.150 --> 00:02:15.080
+Now, I'll just show you, we'll just edit
+this stuff and make it a little simpler.
+
+36
+00:02:15.080 --> 00:02:20.010
+Print "hello world", of course the first
+thing, "hello world", and then I'll run it.
+
+37
+00:02:20.010 --> 00:02:23.530
+So this is an editing area and
+this runs it.
+
+38
+00:02:23.530 --> 00:02:32.150
+And then,
+print "have fun in the class", okay?
+
+39
+00:02:32.150 --> 00:02:38.870
+I can even make a mistake,
+print make a mistake,
+
+40
+00:02:40.720 --> 00:02:42.570
+and I hit Run Python, and it won't run.
+
+41
+00:02:42.570 --> 00:02:44.780
+And, it's not the best of
+error messages, but
+
+42
+00:02:44.780 --> 00:02:47.040
+it does say that there was
+a problem on line three.
+
+43
+00:02:47.040 --> 00:02:50.145
+And I look, and lo and
+behold, there's line three.
+
+44
+00:02:50.145 --> 00:02:55.960
+And once you run it,
+it actually stores the code.
+
+45
+00:02:55.960 --> 00:02:58.460
+So I'm going to finish here, get out,
+
+46
+00:02:58.460 --> 00:02:59.600
+and then go back.
+
+47
+00:02:59.600 --> 00:03:00.900
+I mean, I'll just go right back to it.
+
+48
+00:03:00.900 --> 00:03:05.070
+And you'll see that the code I had
+from before was already there.
+
+49
+00:03:05.070 --> 00:03:08.980
+And so you can use this.
+The Playground is not graded.
+
+50
+00:03:08.980 --> 00:03:11.910
+And you can write any
+Python code you want.
+
+51
+00:03:11.910 --> 00:03:13.580
+And a lot of people do write code.
+
+52
+00:03:15.030 --> 00:03:19.420
+We can take a look, the teaching
+staff, if we find you in a forum or
+
+53
+00:03:19.420 --> 00:03:21.590
+something, we can actually
+look at your code.
+
+54
+00:03:21.590 --> 00:03:26.170
+And so, you can use this as a way to
+communicate with the teaching staff, okay?
+
+55
+00:03:26.170 --> 00:03:27.820
+So, I hope you find that useful.
+
+56
+00:03:27.820 --> 00:03:31.730
+The Python Playground,
+you can always find that under
+
+57
+00:03:31.730 --> 00:03:36.440
+Week 2 where I have the Python,
+how to run Python.
+
+58
+00:03:36.440 --> 00:03:38.410
+And it's there at this first thing.
+
+59
+00:03:38.410 --> 00:03:39.420
+So hope that's helpful to you.
+
+60
+00:03:39.420 --> 00:03:40.380
+See you on the net.

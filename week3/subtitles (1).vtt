@@ -1,0 +1,802 @@
+WEBVTT
+
+1
+00:00:00.960 --> 00:00:05.780
+Hello, and welcome to the reality show
+about exercises in Python.
+
+2
+00:00:05.780 --> 00:00:10.090
+It's not a very exciting reality show, but
+I'm your host, Charles Severance.
+
+3
+00:00:10.090 --> 00:00:15.758
+And these exercises come from Python for
+Informatics: Exploring Information.
+
+4
+00:00:15.758 --> 00:00:20.960
+And, of course this material's Creative
+Commons Attribution,
+
+5
+00:00:20.960 --> 00:00:24.100
+as well as the book and other materials.
+
+6
+00:00:24.100 --> 00:00:28.020
+So by now I hope that you're getting
+pretty good at using Python.
+
+7
+00:00:28.020 --> 00:00:32.880
+Hopefully the pythonlearn materials
+have been helpful to get things set up.
+
+8
+00:00:32.880 --> 00:00:35.220
+So the exercise that we're working on
+today is
+
+9
+00:00:35.220 --> 00:00:41.460
+Exercise 7.3 from the Files chapter, and
+our goal here is
+
+10
+00:00:41.460 --> 00:00:44.280
+is simply to read through a file and
+print
+
+11
+00:00:44.280 --> 00:00:47.630
+out the contents of a file, all in upper
+case.
+
+12
+00:00:47.630 --> 00:00:50.490
+Executing the program will look like this
+screen.
+
+13
+00:00:50.490 --> 00:00:52.290
+We obviously have to prompt for the file
+
+14
+00:00:52.290 --> 00:00:54.000
+name, because it says enter the file name
+and
+
+15
+00:00:54.000 --> 00:00:55.840
+then we give it a file name, or we
+
+16
+00:00:55.840 --> 00:01:01.590
+get our file from this URL shown here,
+py4inf.com/code/mbox-short.txt.
+
+17
+00:01:01.590 --> 00:01:03.074
+So let's do that.
+
+18
+00:01:03.074 --> 00:01:09.430
+And so let's, let's go ahead and do this.
+
+19
+00:01:11.520 --> 00:01:15.140
+So the first thing we're going to do is
+
+20
+00:01:15.140 --> 00:01:18.580
+go to the web, and here's Python for
+Informatics.
+
+21
+00:01:20.020 --> 00:01:22.840
+By the time you're seeing this maybe it'll
+be even prettier.
+
+22
+00:01:22.840 --> 00:01:27.050
+And the URL is in this code samples.
+
+23
+00:01:27.050 --> 00:01:30.140
+And this is old school user look and feel.
+
+24
+00:01:30.140 --> 00:01:34.770
+And I'm going to open this, and this is
+the data that we're going to work with.
+
+25
+00:01:34.770 --> 00:01:37.260
+The mailbox format data.
+
+26
+00:01:37.260 --> 00:01:41.260
+And I'm going to save this as a text
+file.
+
+27
+00:01:41.260 --> 00:01:44.700
+And I'm going to put it in my desktop.
+
+28
+00:01:47.250 --> 00:01:50.890
+In a folder Python for Informatics and I'm
+going to put this mailbox file
+
+29
+00:01:50.890 --> 00:01:54.350
+right in the same place as all of my other
+files.
+
+30
+00:01:54.350 --> 00:01:58.110
+I'm going to verify that that's looking
+really good now by opening
+
+31
+00:01:58.110 --> 00:02:01.580
+up a Terminal window, and I go into that
+folder.
+
+32
+00:02:08.460 --> 00:02:11.210
+And that, that folder right there is in my
+desktop.
+
+33
+00:02:12.280 --> 00:02:12.870
+Python.
+
+34
+00:02:14.570 --> 00:02:16.160
+And there we are. I got my file.
+
+35
+00:02:17.200 --> 00:02:18.550
+Okay?
+
+36
+00:02:18.550 --> 00:02:20.620
+So I'll open up TextWrangler.
+
+37
+00:02:22.860 --> 00:02:23.840
+Make it a little smaller.
+
+38
+00:02:25.670 --> 00:02:25.910
+Okay.
+
+39
+00:02:25.910 --> 00:02:30.965
+And then I could open this file in 
+TextWrangler if I wanted to.
+
+40
+00:02:30.965 --> 00:02:32.370
+mbox-short, and so there it is.
+
+41
+00:02:32.370 --> 00:02:34.276
+If I want to, like, look at it really
+closely.
+
+42
+00:02:34.276 --> 00:02:38.691
+Or we could open, I don't want that.
+
+43
+00:02:38.691 --> 00:02:41.590
+I want to make a new Python program.
+
+44
+00:02:42.680 --> 00:02:47.130
+And so we will, you know, well, the
+first thing
+
+45
+00:02:47.130 --> 00:02:48.870
+we gotta do is, we gotta enter a file
+name.
+
+46
+00:02:48.870 --> 00:02:50.560
+So let's do that.
+
+47
+00:02:50.560 --> 00:02:55.559
+I'll call my variable fname equals
+
+48
+00:02:55.559 --> 00:03:01.130
+raw_input, enter a file name,
+
+49
+00:03:02.310 --> 00:03:04.340
+colon, insert a space, oops.
+
+50
+00:03:04.340 --> 00:03:06.110
+Switch back to single quotes.
+
+51
+00:03:06.110 --> 00:03:09.870
+You could use double quotes or single
+quotes but single quotes are cool.
+
+52
+00:03:09.870 --> 00:03:12.320
+Double quotes make it look like you're a
+Java programer
+
+53
+00:03:12.320 --> 00:03:15.740
+that can't remember whether it's single
+quotes or double quotes.
+
+54
+00:03:15.740 --> 00:03:18.920
+Python doesn't care about it, but the
+cool people use single quotes.
+
+55
+00:03:18.920 --> 00:03:20.920
+So use cool.
+
+56
+00:03:20.920 --> 00:03:23.200
+I mean if you want to be cool.
+
+57
+00:03:23.200 --> 00:03:24.190
+I'm trying to be cool.
+
+58
+00:03:24.190 --> 00:03:25.880
+You can see I sometimes don't get it at
+all.
+
+59
+00:03:25.880 --> 00:03:26.580
+I'm not that cool.
+
+60
+00:03:28.050 --> 00:03:28.430
+Okay.
+
+61
+00:03:28.430 --> 00:03:32.564
+So then I want to print file name, and
+let's save this,
+
+62
+00:03:32.564 --> 00:03:37.274
+and then as soon as we save it, you'll see
+that, python for informatics,
+
+63
+00:03:37.274 --> 00:03:40.144
+I'm going to call the program shout.py,
+and as
+
+64
+00:03:40.144 --> 00:03:42.524
+soon as we get it, we get nice syntax
+
+65
+00:03:42.524 --> 00:03:45.954
+coloring, which helps us understand if
+we've made any,
+
+66
+00:03:45.954 --> 00:03:50.056
+like, typographical error like that, or
+something like that so.
+
+67
+00:03:50.056 --> 00:03:53.760
+So we'll save it and if I come here right
+now I'll see
+
+68
+00:03:53.760 --> 00:04:00.390
+shout.python, shout.py, and I say python
+shout.py.
+
+69
+00:04:00.390 --> 00:04:03.740
+Enter file name, fred. Looks good.
+
+70
+00:04:03.740 --> 00:04:05.230
+OK? I didn't do much else.
+
+71
+00:04:06.880 --> 00:04:09.675
+So, the thing we've gotta do, of course,
+
+72
+00:04:09.675 --> 00:04:12.417
+to read a file, is we can't just read it.
+
+73
+00:04:12.417 --> 00:04:15.590
+We're going to have make them get a file
+name, right?
+
+74
+00:04:15.590 --> 00:04:20.820
+So we'll call our file handle fhand
+variable equals open
+
+75
+00:04:20.820 --> 00:04:26.920
+and then fname is the file.
+
+76
+00:04:26.920 --> 00:04:33.180
+And then, of course, we can write a for
+loop for line in, now line is just
+
+77
+00:04:33.180 --> 00:04:35.500
+a variable name, for and in are keywords,
+
+78
+00:04:35.500 --> 00:04:37.878
+but line is just a variable name, and
+fhand.
+
+79
+00:04:37.878 --> 00:04:43.850
+And that's because the file handle, file
+handle is a type of sequence that we can
+
+80
+00:04:43.850 --> 00:04:49.630
+iterate through in a for loop, and this
+loop will run for each successive
+
+81
+00:04:51.960 --> 00:04:53.640
+line in the file.
+
+82
+00:04:53.640 --> 00:04:58.830
+And so I will just say print line to kind
+
+83
+00:04:58.830 --> 00:05:03.700
+of know that my loop is actually iterating
+through the file.
+
+84
+00:05:03.700 --> 00:05:08.980
+So we've got four lines, and we'll say
+fred again.
+
+85
+00:05:08.980 --> 00:05:13.970
+And son of a gun if the open kind of
+blows up, because there is no fred.
+
+86
+00:05:13.970 --> 00:05:18.698
+So we have to run a program here that's
+actually in the directory.
+
+87
+00:05:20.018 --> 00:05:24.323
+mbox-short.
+
+88
+00:05:24.323 --> 00:05:27.315
+I've shortened the long one, so that
+mbox-short, is
+
+89
+00:05:27.315 --> 00:05:30.250
+just a, you know, it's a little easier,
+smaller.
+
+90
+00:05:30.250 --> 00:05:35.420
+It's just the first few lines of the full
+mbox file.
+
+91
+00:05:35.420 --> 00:05:38.740
+Okay so here we go, and, there we are,
+there we are,
+
+92
+00:05:38.740 --> 00:05:40.540
+and I'm going to have to make that a
+little bit bigger.
+
+93
+00:05:43.700 --> 00:05:46.290
+So if we go up here and we look at this
+
+94
+00:05:46.290 --> 00:05:49.480
+one of the things that we see is that it
+doesn't look
+
+95
+00:05:49.480 --> 00:05:53.100
+like the file because there is a blank
+line after every line.
+
+96
+00:05:54.360 --> 00:05:56.550
+And you say oh crap, why is that?
+
+97
+00:05:56.550 --> 00:06:01.701
+Well, you're just going to have to get
+used to the idiom that is
+
+98
+00:06:01.701 --> 00:06:07.580
+trimming lines, and so I'm going to,
+I'm going to trim.
+
+99
+00:06:07.580 --> 00:06:09.295
+I'm only going to trim on the right side.
+
+100
+00:06:10.295 --> 00:06:11.460
+Line.rtrim.
+
+101
+00:06:12.460 --> 00:06:16.800
+I'm going to trim the white space on the end 
+
+102
+00:06:17.010 --> 00:06:18.200
+and the problem is, is there's a
+
+103
+00:06:18.200 --> 00:06:23.120
+newline here, and that print statement is
+also adding a newline.
+
+104
+00:06:23.120 --> 00:06:24.050
+So I'm just going to trim it.
+
+105
+00:06:24.050 --> 00:06:26.039
+[BLANK_AUDIO]
+
+106
+00:06:26.039 --> 00:06:27.076
+Save that.
+
+107
+00:06:27.076 --> 00:06:28.734
+[BLANK_AUDIO]
+
+108
+00:06:28.734 --> 00:06:32.494
+Make it smaller so we can kind of see it
+going at the same time.
+
+109
+00:06:32.494 --> 00:06:35.460
+I use Cmd+K on my MacIntosh to clear the
+screen.
+
+110
+00:06:35.460 --> 00:06:38.490
+You can actually use cls in Windows if you
+want.
+
+111
+00:06:38.490 --> 00:06:43.348
+And so I'm going to run the same program
+again.
+
+112
+00:06:43.348 --> 00:06:52.204
+mbox-short.txt, and now we should.
+
+113
+00:06:52.204 --> 00:07:01.380
+Oh, oh, oh, it's not rtrim.
+
+114
+00:07:01.380 --> 00:07:05.920
+Object, str object has no attributes
+rtrim, because it's rtrim
+
+115
+00:07:05.920 --> 00:07:08.670
+in some other language, and I'm
+forgetting, because I'm switching
+
+116
+00:07:08.670 --> 00:07:11.550
+between languages, but I just, there's a
+no method, and
+
+117
+00:07:11.550 --> 00:07:14.820
+you'll notice that the syntax coloring is
+not right either.
+
+118
+00:07:14.820 --> 00:07:16.970
+And it's rstrip.
+
+119
+00:07:17.590 --> 00:07:19.620
+How many people caught that?
+
+120
+00:07:19.620 --> 00:07:20.850
+Not many, probably.
+
+121
+00:07:20.850 --> 00:07:22.590
+I didn't even catch it.
+
+122
+00:07:22.590 --> 00:07:24.311
+Let's try it again.
+
+123
+00:07:24.311 --> 00:07:29.241
+mbox-short.txt.
+
+124
+00:07:29.241 --> 00:07:31.641
+Okay, so now it's still kind of ugly and
+nasty,
+
+125
+00:07:31.641 --> 00:07:33.921
+but you can kind of see there's, when we
+print
+
+126
+00:07:33.921 --> 00:07:36.381
+the file out here, there's no extra blank
+lines
+
+127
+00:07:36.381 --> 00:07:39.440
+and that's because the newlines have been
+stripped off.
+
+128
+00:07:39.440 --> 00:07:43.180
+We're still getting a newline from the print
+statement, but we only want one newline.
+
+129
+00:07:44.270 --> 00:07:46.020
+Okay, so we're getting pretty close.
+
+130
+00:07:46.020 --> 00:07:48.690
+We've got, in this little loop right here,
+we've
+
+131
+00:07:48.690 --> 00:07:51.640
+got the line, we've taken off the white
+space.
+
+132
+00:07:51.640 --> 00:07:58.770
+So now it's a pretty simple task to just
+say line equals line.upper,
+
+133
+00:07:58.770 --> 00:08:03.275
+and then we're going to convert the whole
+thing to uppercase and run it again.
+
+134
+00:08:03.275 --> 00:08:11.260
+mbox-short.txt
+
+135
+00:08:11.260 --> 00:08:11.760
+There we go.
+
+136
+00:08:12.790 --> 00:08:16.820
+It is shouting, shouting, shouting,
+because everything is in upper case.
+
+137
+00:08:18.300 --> 00:08:22.190
+So that's pretty straightforward, not too
+much error checking.
+
+138
+00:08:22.190 --> 00:08:29.640
+Let me show you one, one sort of Python
+idiom that allows you to contract this.
+
+139
+00:08:29.640 --> 00:08:31.670
+So in a sense, this is a function call.
+
+140
+00:08:31.670 --> 00:08:34.930
+It says, give me back a new string, which
+
+141
+00:08:34.930 --> 00:08:37.630
+is a copy of line with the white space
+removed.
+
+142
+00:08:37.630 --> 00:08:43.040
+Well, this is a string, and we can apply a
+string library method to it, as well.
+
+143
+00:08:43.040 --> 00:08:49.560
+So I can actually tack on the end of this
+the upper, and I can take this line out.
+
+144
+00:08:49.560 --> 00:08:52.470
+And now I can do it all in one line.
+
+145
+00:08:52.470 --> 00:08:57.790
+And this code says, take line, strip the
+white space, and then take
+
+146
+00:08:57.790 --> 00:09:02.825
+the resulting white space free, and
+convert it to upper case.
+
+147
+00:09:02.825 --> 00:09:06.250
+And that should accomplish the same thing.
+
+148
+00:09:11.260 --> 00:09:12.760
+Let's make sure 
+
+149
+00:09:12.960 --> 00:09:14.200
+we don't have blank lines.
+
+150
+00:09:14.200 --> 00:09:15.040
+We don't have blank lines.
+
+151
+00:09:15.040 --> 00:09:16.360
+So everything is fine.
+
+152
+00:09:16.360 --> 00:09:16.860
+Okay?
+
+153
+00:09:18.270 --> 00:09:19.940
+So we could add a few things.
+
+154
+00:09:19.940 --> 00:09:21.280
+Let's add something to this.
+
+155
+00:09:21.280 --> 00:09:22.710
+We've got their specifications done.
+
+156
+00:09:22.710 --> 00:09:26.310
+We're kind of done at the minimum, but let
+me show you something cool here.
+
+157
+00:09:27.660 --> 00:09:31.040
+Let's just say you got tired of typing
+that file name all the time.
+
+158
+00:09:31.040 --> 00:09:31.900
+Here's a little trick.
+
+159
+00:09:33.780 --> 00:09:36.150
+If the length of fname
+
+160
+00:09:37.850 --> 00:09:39.630
+is less than one.
+
+161
+00:09:39.630 --> 00:09:40.800
+I'll just say equals zero.
+
+162
+00:09:43.970 --> 00:09:49.108
+You're going to set the fname, fname
+
+163
+00:09:49.108 --> 00:09:55.252
+equals mbox-short.txt.
+
+164
+00:09:56.640 --> 00:09:58.890
+So that basically means that if we
+enter a real file
+
+165
+00:09:58.890 --> 00:10:01.660
+name, the length of the file name will be
+greater than zero.
+
+166
+00:10:01.660 --> 00:10:04.330
+If we don't, we're just going to assume
+we're just going to change that
+
+167
+00:10:04.330 --> 00:10:07.130
+variable to fname, and then when we open
+it, we'll have it.
+
+168
+00:10:07.130 --> 00:10:08.700
+So watch this.
+
+169
+00:10:08.700 --> 00:10:09.464
+Oh, better save that.
+
+170
+00:10:09.464 --> 00:10:15.151
+[BLANK_AUDIO]
+
+171
+00:10:15.151 --> 00:10:18.910
+So I could type a file name but if I hit
+Enter, it just does that.
+
+172
+00:10:18.910 --> 00:10:20.640
+Look how convenient that is.
+
+173
+00:10:20.640 --> 00:10:23.920
+So, in effect it was creating a default, as
+it were.
+
+174
+00:10:23.920 --> 00:10:28.410
+When the user types enter, they sort of do
+their thing.
+
+175
+00:10:28.410 --> 00:10:29.510
+Okay?
+
+176
+00:10:29.510 --> 00:10:34.180
+So, that's pretty much it for the
+Exercise 7.3.
+
+177
+00:10:34.180 --> 00:10:36.880
+The shouting at exercise.

@@ -1,0 +1,47 @@
+What I want to do in this video is
+give you a real short introduction in how to use the Python Playground. Now, we really, really indeed want you to
+install Python and run it on your desktop. And we give you instructions on how to
+do that and videos on how to do that. The idea is eventually,
+especially if you're going to complete the entire specialization, you must run
+the programs on a desktop or laptop or a real computer where you can have files
+and manipulate data and create databases. But it's not essential in the first two
+courses to actually install Python. We provide you a web-based,
+browser-based Python environment. But again, before I show you that,
+I just want to encourage you to go through the installing process, and get it there,
+and it's just gonna save you some time. In Week 2, we have this link. This link will become useful to you. We call it the Python Playground,
+how to develop Python in the browser. And this uses a actual Python compiler
+that compiles code to JavaScript and then runs it in your browser, so
+we're actually not running your code. We're really emulating your code. And this Python environment that we have
+is not a perfect Python environment, and that's why I really want
+you to use the real one. It's really designed as an autograder
+for the very simple Python applications that I assign you in this course.
+But you can play. So some of these buttons you're not going
+to see because you're not the teacher. You'll see the Run Python button and
+the Reset Code button and the Exit button. So this remembers the code
+that you wrote the first time. And depending on what
+assignment you're working on, there is base code that's
+not always correct. In this case, I can reset the code
+to the original that you will see in the Python Playground, and this is it. And it opens a file, and you're very at
+the beginning, so don't worry about this. But there are some files,
+the files I use throughout the book, and they're sitting here
+available to be opened. You can't just open any old file,
+just these three files are available. And then, you hit the
+button and Run Python, and then it runs the Python program, and the
+output of the Python program happens here. Now, I'll just show you, we'll just edit
+this stuff and make it a little simpler. Print "hello world", of course the first
+thing, "hello world", and then I'll run it. So this is an editing area and
+this runs it. And then,
+print "have fun in the class", okay? I can even make a mistake,
+print make a mistake, and I hit Run Python, and it won't run. And, it's not the best of
+error messages, but it does say that there was
+a problem on line three. And I look, and lo and
+behold, there's line three. And once you run it,
+it actually stores the code. So I'm going to finish here, get out, and then go back. I mean, I'll just go right back to it. And you'll see that the code I had
+from before was already there. And so you can use this.
+The Playground is not graded. And you can write any
+Python code you want. And a lot of people do write code. We can take a look, the teaching
+staff, if we find you in a forum or something, we can actually
+look at your code. And so, you can use this as a way to
+communicate with the teaching staff, okay? So, I hope you find that useful. The Python Playground,
+you can always find that under Week 2 where I have the Python,
+how to run Python. And it's there at this first thing. So hope that's helpful to you. See you on the net.

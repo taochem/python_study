@@ -1,0 +1,1423 @@
+WEBVTT
+
+1
+00:00:01.210 --> 00:00:04.130
+Hello, and welcome to yet another worked
+exercise.
+
+2
+00:00:04.130 --> 00:00:07.220
+I'm the author of the book Python for
+Informatics: Exploring Information,
+
+3
+00:00:07.220 --> 00:00:12.430
+as well as your host for this
+particular worked exercise.
+
+4
+00:00:13.470 --> 00:00:16.640
+As always, the book, this audio and video,
+
+5
+00:00:16.640 --> 00:00:19.860
+and these slides are copyright Creative
+Commons Attribution, and
+
+6
+00:00:19.860 --> 00:00:22.840
+I hope you find exciting and interesting
+ways to
+
+7
+00:00:22.840 --> 00:00:26.320
+reuse them and re-purpose them and add to
+them.
+
+8
+00:00:26.320 --> 00:00:31.610
+So pythonlearn.com is my support website
+for the Python for Informatics book.
+
+9
+00:00:31.610 --> 00:00:33.750
+And if you, hopefully by now you've got
+all this
+
+10
+00:00:33.750 --> 00:00:37.280
+worked out, but it does teach you how to
+get started.
+
+11
+00:00:37.280 --> 00:00:40.770
+So that, how all the things that you need
+to know,
+
+12
+00:00:40.770 --> 00:00:45.240
+to edit files and use the command line to run
+Python programs you've got figured out.
+
+13
+00:00:45.240 --> 00:00:45.890
+Okay?
+
+14
+00:00:45.890 --> 00:00:49.300
+So our program for today is from the list
+chapter.
+
+15
+00:00:49.300 --> 00:00:52.180
+And our program is actually, we're
+going to debug a program
+
+16
+00:00:52.180 --> 00:00:55.550
+rather than just writing a program from
+scratch.
+
+17
+00:00:55.550 --> 00:00:59.870
+And so what our, our task is, in this
+program is we're looking
+
+18
+00:00:59.870 --> 00:01:05.360
+for words that start with from,
+looking for lines that start with from.
+
+19
+00:01:05.360 --> 00:01:07.840
+And on the lines that start with from,
+we're going to pull out the
+
+20
+00:01:07.840 --> 00:01:10.330
+day of the week that this particular
+
+21
+00:01:10.330 --> 00:01:14.370
+email message was sent. Saturday, Friday,
+whatever.
+
+22
+00:01:16.620 --> 00:01:19.460
+And so the structure of the program
+is pretty standard.
+
+23
+00:01:19.460 --> 00:01:21.010
+We're going to open a file at the top.
+
+24
+00:01:21.010 --> 00:01:23.980
+We're going to loop through the file.
+
+25
+00:01:23.980 --> 00:01:25.660
+Strip the newlines at the end, right?
+
+26
+00:01:25.660 --> 00:01:28.370
+There's a little newline at the end of
+each line.
+
+27
+00:01:28.370 --> 00:01:29.830
+And then we're going to use split to split
+it into words,
+
+28
+00:01:29.830 --> 00:01:34.810
+which means that'll make this the
+zero word, the one word,
+
+29
+00:01:34.810 --> 00:01:36.350
+and the two word.
+
+30
+00:01:36.350 --> 00:01:38.820
+And then we're going to check the zero
+word to see if it's from,
+
+31
+00:01:38.820 --> 00:01:42.040
+and if the zero word's not from we're
+uninterested in that line so we're going
+
+32
+00:01:42.040 --> 00:01:46.740
+to skip back up. And if it is good, if we
+we find a line
+
+33
+00:01:46.740 --> 00:01:49.870
+we're interested in, we're going to skip
+the majority of the lines in this file.
+
+34
+00:01:51.090 --> 00:01:53.130
+Less than one in 100 of these lines
+actually
+
+35
+00:01:53.130 --> 00:01:55.770
+have from in the, as the first word.
+
+36
+00:01:55.770 --> 00:01:57.680
+And then the second word is what we're
+interested in
+
+37
+00:01:57.680 --> 00:01:59.480
+so we're going to print the, the day of
+the week.
+
+38
+00:02:00.910 --> 00:02:05.300
+So this program as we type it in is going
+to have a
+
+39
+00:02:05.300 --> 00:02:08.280
+traceback and we go like, you know, as soon
+as you see traceback
+
+40
+00:02:08.280 --> 00:02:12.290
+you immediately are drawn to the word
+traceback and maybe you've gotten to
+
+41
+00:02:12.290 --> 00:02:16.910
+the point where you start to read the why,
+list index out of range.
+
+42
+00:02:16.910 --> 00:02:19.870
+And then, you know, it says line five, so
+that's kind of helpful.
+
+43
+00:02:19.870 --> 00:02:25.660
+But the first thing to not get distracted
+about is, is this.
+
+44
+00:02:25.660 --> 00:02:27.960
+Our program actually ran a little bit.
+
+45
+00:02:27.960 --> 00:02:31.810
+So when you look at a traceback, look
+right above it and make sure, and
+
+46
+00:02:31.810 --> 00:02:33.550
+maybe you won't see any output, but maybe
+
+47
+00:02:33.550 --> 00:02:36.680
+your program will have partially run,
+and so
+
+48
+00:02:36.680 --> 00:02:39.580
+don't immediately assume the program is
+totally broken. So this
+
+49
+00:02:39.580 --> 00:02:43.770
+is actually successful output of one of
+the many from lines.
+
+50
+00:02:43.770 --> 00:02:45.670
+And it, it dies later.
+
+51
+00:02:45.670 --> 00:02:51.490
+And so, as we debug it, we'll sort of come
+up with techniques to sort of figure out
+
+52
+00:02:51.490 --> 00:02:53.400
+how much your program has done before it
+died,
+
+53
+00:02:53.400 --> 00:02:57.200
+because that might be an important,
+important question to answer.
+
+54
+00:02:57.200 --> 00:03:02.100
+How far did your program get, because if
+it dies before the first line, or on
+
+55
+00:03:02.200 --> 00:03:03.850
+the first line, that's something different
+than if
+
+56
+00:03:03.850 --> 00:03:07.000
+it goes like 300 lines and then dies.
+
+57
+00:03:07.110 --> 00:03:10.730
+If it goes a long ways, 300 lines, and
+then dies,
+
+58
+00:03:10.730 --> 00:03:14.540
+maybe there's something subtle or weird
+about the line it's dying on,
+
+59
+00:03:14.540 --> 00:03:15.840
+rather than just your program is
+
+60
+00:03:15.840 --> 00:03:17.710
+just like totally broken.
+
+61
+00:03:17.710 --> 00:03:22.430
+So you got, look for something where your
+program actually partially worked,
+
+62
+00:03:22.430 --> 00:03:25.370
+and helps you kind of narrow down
+your suspicions as
+
+63
+00:03:25.370 --> 00:03:26.730
+to what might be wrong with this.
+
+64
+00:03:26.730 --> 00:03:29.590
+So let's get on with the, let's get on
+with the programming.
+
+65
+00:03:32.020 --> 00:03:34.750
+And so I will simply steal this.
+
+66
+00:03:34.750 --> 00:03:35.780
+I'll cut and paste it.
+
+67
+00:03:36.970 --> 00:03:38.570
+And that will be that.
+
+68
+00:03:38.570 --> 00:03:42.640
+So I'm going to cut and paste this into my
+TextWrangler.
+
+69
+00:03:42.640 --> 00:03:44.610
+Now it's always dangerous cutting and
+pasting.
+
+70
+00:03:44.610 --> 00:03:47.200
+But I'm cutting and pasting from a slide
+which seems
+
+71
+00:03:47.200 --> 00:03:49.020
+to work a little better than cutting and
+pasting from PDFs.
+
+72
+00:03:49.020 --> 00:03:51.390
+And you can even get away with cutting and
+
+73
+00:03:51.390 --> 00:03:53.580
+pasting with PDFs as long as you don't
+freak out
+
+74
+00:03:53.580 --> 00:03:54.760
+when the first thing you see is a bunch
+
+75
+00:03:54.760 --> 00:03:59.430
+of crazy syntax errors because of
+characters being coded improperly.
+
+76
+00:03:59.430 --> 00:04:01.760
+So now I'm in this file, and I'm going to
+save this.
+
+77
+00:04:01.760 --> 00:04:05.735
+Save As, and I'll put this on my Desktop
+
+78
+00:04:05.735 --> 00:04:11.567
+in the lists folder.
+
+79
+00:04:11.567 --> 00:04:19.440
+And we'll call this day of the week .py in the
+lists folder.
+
+80
+00:04:21.420 --> 00:04:23.310
+Okay, and of course it's, syntax
+
+81
+00:04:23.310 --> 00:04:25.590
+colored it, which makes my TextWrangler
+
+82
+00:04:25.590 --> 00:04:27.410
+syntax colored it, and so I've got sitting
+
+83
+00:04:27.410 --> 00:04:30.760
+in this lists folder, I've got the
+day of the week .py.
+
+84
+00:04:30.760 --> 00:04:35.200
+Now one of the things that we've got to do
+is we've actually got to get our data file.
+
+85
+00:04:35.200 --> 00:04:37.200
+See this mbox-short.txt?
+
+86
+00:04:37.200 --> 00:04:42.730
+So the mbox-short.txt is sitting here on
+pythonlearn.com.
+
+87
+00:04:42.730 --> 00:04:48.110
+I'll go to the book page and you'll see
+this, all the stuff and code samples.
+
+88
+00:04:48.110 --> 00:04:51.085
+Including maybe a worked version of this
+example, you just never know.
+
+89
+00:04:51.085 --> 00:04:54.790
+[NOISE] It doesn't look like
+this one's here but
+
+90
+00:04:54.790 --> 00:05:00.030
+the file I'm looking for is mbox dot
+short dot t-x-t.
+
+91
+00:05:01.030 --> 00:05:01.635
+So there it is.
+
+92
+00:05:01.635 --> 00:05:03.870
+It's a mailing thing and here's one of
+those lines
+
+93
+00:05:03.870 --> 00:05:05.750
+we're looking at and we're going to
+there's many of them.
+
+94
+00:05:05.750 --> 00:05:07.320
+This happens to be the first line of the
+file.
+
+95
+00:05:07.320 --> 00:05:11.950
+So I'm going to make sure that I save this
+into the folder.
+
+96
+00:05:11.950 --> 00:05:17.370
+Go back to my Desktop and put it in lists
+and then save it.
+
+97
+00:05:18.550 --> 00:05:19.350
+And so.
+
+98
+00:05:21.000 --> 00:05:26.640
+At that point I should be able to go back
+and see ah-hah, I have mbox-short.txt.
+
+99
+00:05:26.640 --> 00:05:31.830
+Now the interesting thing is if you read
+this file, [SOUND] if you open this file,
+
+100
+00:05:35.310 --> 00:05:36.610
+TextWrangler's perfectly happy.
+
+101
+00:05:36.610 --> 00:05:37.920
+So we see from.
+
+102
+00:05:37.920 --> 00:05:44.270
+So if I was to do sort of a search, and I
+want to search for the string
+
+103
+00:05:44.270 --> 00:05:47.211
+capital From space. Okay?
+
+104
+00:05:47.211 --> 00:05:51.540
+And then I'm going to search next.
+
+105
+00:05:53.310 --> 00:05:54.260
+Oh, there's lots of them.
+
+106
+00:05:54.260 --> 00:05:56.370
+I'm going to make them case sensitive,
+okay?
+
+107
+00:05:56.370 --> 00:05:59.180
+So it'll only be the Froms that are case
+sensitive.
+
+108
+00:06:00.390 --> 00:06:04.899
+There we go, and so in a sense our program is
+doing this little From where it's looking.
+
+109
+00:06:05.920 --> 00:06:08.420
+It's throwing away all the lines except
+those that start with
+
+110
+00:06:08.420 --> 00:06:10.580
+From and a space, because of the way the
+split works.
+
+111
+00:06:10.580 --> 00:06:15.680
+And then it's going to pull these, these
+days of the week, these Fridays.
+
+112
+00:06:15.680 --> 00:06:18.680
+So I'm kind of doing, if I was doing it by
+hand it
+
+113
+00:06:18.680 --> 00:06:22.820
+would be like find the line that starts
+with From blank, and then
+
+114
+00:06:22.820 --> 00:06:25.990
+grab this little text, and that's what I'm
+interested in.
+
+115
+00:06:25.990 --> 00:06:28.500
+Maybe I'm curious as to whether or not
+these
+
+116
+00:06:28.500 --> 00:06:31.690
+folks work on the weekends or on the
+weekdays.
+
+117
+00:06:31.690 --> 00:06:33.860
+And that's the purpose of this.
+
+118
+00:06:33.860 --> 00:06:34.540
+Okay?
+
+119
+00:06:34.540 --> 00:06:35.460
+So I'll close this.
+
+120
+00:06:35.460 --> 00:06:39.240
+Just, it's, that's what, that's the, Close
+Document.
+
+121
+00:06:39.240 --> 00:06:39.760
+There we go.
+
+122
+00:06:39.760 --> 00:06:41.880
+So here's my little program.
+
+123
+00:06:41.880 --> 00:06:46.700
+And so, let's, I can get rid of this now.
+
+124
+00:06:46.700 --> 00:06:48.890
+So now I'm going to go into my Desktop.
+
+125
+00:06:48.890 --> 00:06:50.570
+I'm in my home directory.
+
+126
+00:06:50.570 --> 00:06:56.320
+cd Desktop, cd lists. If I do ls, there
+I am.
+
+127
+00:06:56.320 --> 00:07:00.830
+I've got this day, day of the week Python
+program, and mbox-short.txt sitting here.
+
+128
+00:07:00.830 --> 00:07:09.160
+So I'm going to run it [SOUND]
+and there it works.
+
+129
+00:07:09.160 --> 00:07:11.800
+I'll get, I mean, well, works for some
+value of work.
+
+130
+00:07:11.800 --> 00:07:14.140
+So we get the same traceback the lecture
+slide suggested
+
+131
+00:07:14.140 --> 00:07:17.640
+we would, and thankfully that probably
+means the lecture slide's right.
+
+132
+00:07:17.640 --> 00:07:19.450
+So, so here we go.
+
+133
+00:07:19.450 --> 00:07:22.360
+We got, we got this one thing where the
+day of the
+
+134
+00:07:22.360 --> 00:07:26.340
+week is kind of coming out and then it
+dies on line five.
+
+135
+00:07:26.340 --> 00:07:28.150
+And it even gives us the line it's dying on.
+
+136
+00:07:28.150 --> 00:07:30.750
+So, it's complaining about list index out
+of range, and you
+
+137
+00:07:30.750 --> 00:07:32.570
+might be able to stare at this and maybe
+you're smart.
+
+138
+00:07:32.570 --> 00:07:34.290
+You're, you have enough skill already that
+
+139
+00:07:34.290 --> 00:07:35.930
+you're seeing these kinds of errors and
+you
+
+140
+00:07:35.930 --> 00:07:39.360
+just read it right away, know what the
+problem is, but that's not so much fun.
+
+141
+00:07:39.360 --> 00:07:41.330
+So here I am in line five, right?
+
+142
+00:07:41.330 --> 00:07:43.400
+I'm going to go right to line five.
+
+143
+00:07:43.400 --> 00:07:46.980
+And, and so the first thing I want to do
+on line five,
+
+144
+00:07:46.980 --> 00:07:50.810
+is I often add a print statement right
+before the line that's dying.
+
+145
+00:07:50.810 --> 00:07:54.258
+And I'll just print out something.
+
+146
+00:07:54.258 --> 00:07:55.830
+Something random.
+
+147
+00:07:55.830 --> 00:07:59.110
+Just, it, you know, sometimes I print the
+letter a out, right?
+
+148
+00:07:59.110 --> 00:08:00.310
+And so now I'll save this.
+
+149
+00:08:01.490 --> 00:08:03.120
+And now I'm going to run it again,
+
+150
+00:08:05.380 --> 00:08:10.650
+and this tells me, just by putting a print
+statement in, what's going on here.
+
+151
+00:08:10.650 --> 00:08:11.970
+It's like, okay wait a sec.
+
+152
+00:08:11.970 --> 00:08:13.090
+This is the good line.
+
+153
+00:08:13.090 --> 00:08:15.150
+This is the line, I mean, this is the line
+I'm interested in.
+
+154
+00:08:15.150 --> 00:08:17.150
+As a matter of fact, I'm going to make
+another change
+
+155
+00:08:17.150 --> 00:08:19.820
+just to help me sort of visually see
+what's going on.
+
+156
+00:08:19.820 --> 00:08:22.572
+I'm going to put like a bunch of
+equal signs at
+
+157
+00:08:22.572 --> 00:08:25.770
+the beginning of this line and now I'm
+going to run it again.
+
+158
+00:08:26.950 --> 00:08:29.650
+So if I look, it's like, oh, dude, that's
+the good line.
+
+159
+00:08:29.650 --> 00:08:30.680
+That's the line I'm liking.
+
+160
+00:08:30.680 --> 00:08:33.720
+And here's my debugging, Something random,
+Something random, Something random.
+
+161
+00:08:33.720 --> 00:08:35.750
+So a lot of stuff is going on here.
+
+162
+00:08:35.750 --> 00:08:38.860
+And then finally it dies, right?
+
+163
+00:08:38.860 --> 00:08:40.550
+So finally, it dies here.
+
+164
+00:08:40.550 --> 00:08:42.760
+Now, it's line six because I added a line.
+
+165
+00:08:42.760 --> 00:08:44.570
+So the, so perhaps instead of printing
+
+166
+00:08:44.570 --> 00:08:48.370
+out Something random, I'll print something
+useful.
+
+167
+00:08:49.590 --> 00:08:53.490
+So, the first thing to do is to look at
+this statement, the one that's dying.
+
+168
+00:08:53.490 --> 00:08:57.910
+And say, what is the most suspicious thing
+in here, okay?
+
+169
+00:08:57.910 --> 00:09:01.240
+And, and so, if something's going wrong
+with this
+
+170
+00:09:01.240 --> 00:09:04.330
+words sub zero, it's saying index out of
+range, right?
+
+171
+00:09:04.330 --> 00:09:06.120
+Something going wrong with words sub zero.
+
+172
+00:09:06.120 --> 00:09:07.350
+So what's the deal?
+
+173
+00:09:07.350 --> 00:09:10.210
+So I'm not going to print out words sub
+zero, I'm going to print out words.
+
+174
+00:09:10.210 --> 00:09:14.330
+I'm going to say, like, what is in this
+words list at this point?
+
+175
+00:09:14.330 --> 00:09:15.200
+So now let me save that.
+
+176
+00:09:15.200 --> 00:09:19.650
+So instead of printing something random,
+we'll see a bunch of words go by.
+
+177
+00:09:19.650 --> 00:09:21.860
+And so here's that first line broken
+
+178
+00:09:21.870 --> 00:09:26.020
+into words, where From, Stephen Marquard,
+Saturday.
+
+179
+00:09:26.020 --> 00:09:27.960
+And here's our good line.
+
+180
+00:09:27.960 --> 00:09:31.090
+And then here's one that doesn't have From
+as the first word, so we skip it.
+
+181
+00:09:31.090 --> 00:09:32.160
+Here's one that doesn't.
+
+182
+00:09:32.160 --> 00:09:33.850
+So let's continue onto where it's, you
+know,
+
+183
+00:09:33.850 --> 00:09:36.820
+we see lots of lines, everything's
+cruising along.
+
+184
+00:09:36.820 --> 00:09:40.260
+We actually see one that says From colon,
+but that's not what we're looking for.
+
+185
+00:09:40.260 --> 00:09:41.940
+So that one gets skipped too.
+
+186
+00:09:41.940 --> 00:09:43.140
+So make sure you skip that.
+
+187
+00:09:43.140 --> 00:09:44.840
+Now, here we are.
+
+188
+00:09:45.250 --> 00:09:46.370
+Here's the words.
+
+189
+00:09:49.140 --> 00:09:51.930
+Here's that list of words that we've
+split.
+
+190
+00:09:51.930 --> 00:09:53.850
+Now, this was the line before, here's the
+next line.
+
+191
+00:09:53.850 --> 00:09:55.630
+It's like, okay, what's going on here?
+
+192
+00:09:56.870 --> 00:09:58.880
+That looks like an empty list.
+
+193
+00:09:58.880 --> 00:10:02.540
+Okay, so I'm a little more curious, I'm
+going to,
+
+194
+00:10:02.540 --> 00:10:05.608
+I'm going to print, I'm going to print
+line out too.
+
+195
+00:10:05.608 --> 00:10:09.050
+And I'm going to put, just so I
+know what's
+
+196
+00:10:09.050 --> 00:10:12.120
+going on, I'll stick some, a couple
+of pluses in front of that.
+
+197
+00:10:12.120 --> 00:10:14.590
+So the line will have pluses on it, and
+it'll print the word.
+
+198
+00:10:14.590 --> 00:10:15.350
+So let's run this again.
+
+199
+00:10:15.350 --> 00:10:18.160
+So I'm adding junk to this, right?
+
+200
+00:10:18.160 --> 00:10:21.890
+So now when I look at my things, the
+pluses mean that's the line I'm seeing.
+
+201
+00:10:21.890 --> 00:10:22.060
+Right?
+
+202
+00:10:22.060 --> 00:10:23.480
+I just put those pluses in for my own
+
+203
+00:10:23.480 --> 00:10:26.630
+visible, so I can visually see it more
+naturally.
+
+204
+00:10:26.630 --> 00:10:29.460
+That's the line, and you can see how nicely
+it breaks
+
+205
+00:10:29.460 --> 00:10:32.190
+it into words. Sso it breaks this line at
+the space.
+
+206
+00:10:32.190 --> 00:10:32.970
+Oops, sorry.
+
+207
+00:10:32.970 --> 00:10:34.540
+That was not so good.
+
+208
+00:10:34.540 --> 00:10:40.040
+It, it breaks this line, spam probability
+line, at this space and gives me two words.
+
+209
+00:10:40.040 --> 00:10:40.540
+Right?
+
+210
+00:10:41.810 --> 00:10:42.640
+So here we are.
+
+211
+00:10:42.640 --> 00:10:43.620
+Two, here we go.
+
+212
+00:10:43.620 --> 00:10:47.720
+Here's this space, and then it breaks
+it into one word, and another word.
+
+213
+00:10:47.720 --> 00:10:48.950
+And so that's working.
+
+214
+00:10:48.950 --> 00:10:51.760
+But if I look here, that's the line that
+I'm on.
+
+215
+00:10:51.760 --> 00:10:53.510
+Oh, well that's a blank line.
+
+216
+00:10:53.510 --> 00:10:55.400
+Hang on a sec, hang on a sec. So let's
+
+217
+00:10:55.400 --> 00:10:58.050
+just real quick take a look at that file
+again.
+
+218
+00:11:01.320 --> 00:11:05.520
+Let's look at that file. And so here we
+go, here we go
+
+219
+00:11:08.670 --> 00:11:10.660
+So that's cool, that's cool, that's cool,
+let's look at the line.
+
+220
+00:11:13.640 --> 00:11:16.220
+And here we go, so if you look.
+
+221
+00:11:16.220 --> 00:11:19.440
+The last thing that we read successfully
+was this line right here.
+
+222
+00:11:20.940 --> 00:11:26.410
+This line is a blank line, so our program
+is choking on blank lines.
+
+223
+00:11:26.410 --> 00:11:29.650
+It's not failing on lines that work right,
+and it's
+
+224
+00:11:29.650 --> 00:11:32.050
+not failing on lines that don't have From
+in them.
+
+225
+00:11:32.050 --> 00:11:36.350
+It can handle the From line fine, it can
+handle the, any other line fine.
+
+226
+00:11:36.350 --> 00:11:41.640
+But it freaks out on the simplest of
+things, blank lines.
+
+227
+00:11:41.640 --> 00:11:44.805
+So the question is, how do we fix this?
+
+228
+00:11:45.805 --> 00:11:47.240
+Right?
+
+229
+00:11:47.240 --> 00:11:50.050
+How do we deal with this fact that
+this bit
+
+230
+00:11:50.050 --> 00:11:57.530
+of code right here is dying whenever
+there's a blank line, okay?
+
+231
+00:11:57.530 --> 00:12:00.135
+So the way we do this is what's called
+the guardian pattern.
+
+232
+00:12:00.135 --> 00:12:02.180
+Now I'm going to get rid of this.
+
+233
+00:12:03.910 --> 00:12:07.210
+So one of the guardian patterns is it
+looks like this.
+
+234
+00:12:07.210 --> 00:12:08.770
+So, we don't want to get to this.
+
+235
+00:12:08.770 --> 00:12:10.350
+So we want to put something in front of it
+to
+
+236
+00:12:10.350 --> 00:12:13.180
+make sure we never hit it in a dangerous
+situation.
+
+237
+00:12:13.180 --> 00:12:17.370
+So it's if hmm, hmm, hmm, something,
+continue.
+
+238
+00:12:17.370 --> 00:12:22.730
+And this is if, we'll call this thing the
+safety check.
+
+239
+00:12:24.730 --> 00:12:25.370
+Check.
+
+240
+00:12:27.240 --> 00:12:29.330
+If some safety check, continue.
+
+241
+00:12:29.330 --> 00:12:35.210
+So that means that, you know, you know, if
+the safety check matches,
+
+242
+00:12:35.210 --> 00:12:38.370
+we're going to not fall through and not do
+this dangerous line.
+
+243
+00:12:38.370 --> 00:12:40.830
+So the question is what would we put in as
+the
+
+244
+00:12:40.830 --> 00:12:45.390
+safety check here to protect. This line is
+guarding this line.
+
+245
+00:12:45.390 --> 00:12:47.470
+That's what the guardian pattern means, is do
+
+246
+00:12:47.470 --> 00:12:50.130
+something before the scary thing that
+hurts you.
+
+247
+00:12:51.520 --> 00:12:52.111
+Okay?
+
+248
+00:12:52.111 --> 00:12:59.060
+So, one thing we can do is we can say,
+okay, well, what's words?
+
+249
+00:12:59.060 --> 00:13:00.700
+Well words is an empty list.
+
+250
+00:13:00.700 --> 00:13:01.620
+You know what?
+
+251
+00:13:01.620 --> 00:13:05.820
+If, if I got an empty list of words, I
+have no interest in this.
+
+252
+00:13:05.820 --> 00:13:11.340
+So if I say words is equal to an empty
+list, continue.
+
+253
+00:13:11.340 --> 00:13:12.526
+So what this basically says is.
+
+255
+00:13:13.097 --> 00:13:14.148
+You know.
+
+256
+00:13:15.148 --> 00:13:18.630
+Read the line, strip it, split it into
+words.
+
+257
+00:13:18.630 --> 00:13:19.630
+We'll print it.
+
+258
+00:13:19.630 --> 00:13:26.230
+If it's an empty list, continue and go up
+to the next line.
+
+259
+00:13:26.230 --> 00:13:29.770
+And then, if it is a non-empty list, it
+continues here
+
+260
+00:13:29.770 --> 00:13:33.010
+and checks to see if the first word is
+From.
+
+261
+00:13:33.010 --> 00:13:36.110
+And if it is not, it continues, and then if
+it works, it works.
+
+262
+00:13:36.110 --> 00:13:40.850
+So this here, this line here, is
+the guardian line, it's
+
+263
+00:13:40.850 --> 00:13:44.240
+guarding the, this other line and you
+gotta do it in order.
+
+264
+00:13:44.240 --> 00:13:45.220
+If you do the guard, you have to
+
+265
+00:13:45.220 --> 00:13:48.650
+have the guardian happen before the line
+in question.
+
+266
+00:13:48.650 --> 00:13:49.520
+So now let's run it.
+
+267
+00:13:52.360 --> 00:13:53.850
+Oops.
+
+268
+00:13:53.850 --> 00:13:56.280
+Let's run it, and now it works great.
+
+269
+00:13:56.280 --> 00:14:02.860
+It's, we got a little too much crap, so we
+better get rid of this print statement.
+
+270
+00:14:04.150 --> 00:14:05.570
+It didn't give me a traceback, right?
+
+271
+00:14:05.570 --> 00:14:08.690
+So now I'm going to get rid of that print
+statement and look at that.
+
+272
+00:14:08.690 --> 00:14:11.900
+I'm getting the line Saturday, Friday,
+Friday, Friday, Friday, Thursday.
+
+273
+00:14:11.900 --> 00:14:14.140
+So it doesn't look like these people work
+weekends.
+
+274
+00:14:14.140 --> 00:14:18.320
+But it does look like they like finishing
+up stuff toward the end of the week.
+
+275
+00:14:18.320 --> 00:14:19.620
+So, there we go.
+
+276
+00:14:19.620 --> 00:14:24.000
+I mean, it's a little bit of, it's not
+much data to conclude anything solidly.
+
+277
+00:14:24.000 --> 00:14:28.140
+Maybe if we look at the bigger mailbox
+file, we can find something else.
+
+278
+00:14:29.300 --> 00:14:30.590
+Okay, so now it works.
+
+279
+00:14:30.590 --> 00:14:32.930
+Let me show you a couple of other things
+
+280
+00:14:32.930 --> 00:14:34.890
+that you could have used as a guardian
+pattern.
+
+281
+00:14:34.890 --> 00:14:37.910
+So we could say  if the words we got back is
+an empty list.
+
+282
+00:14:37.910 --> 00:14:43.640
+I could say if the number of elements in
+words is less than one, continue.
+
+283
+00:14:43.640 --> 00:14:47.680
+That basically says, look, if the words
+that I got, if I got fewer than
+
+284
+00:14:47.680 --> 00:14:49.230
+one word, then I'm not going to look
+
+285
+00:14:49.230 --> 00:14:51.680
+for the first word, because that's quite
+dangerous.
+
+286
+00:14:51.680 --> 00:14:54.810
+So if I run that, it again works.
+
+287
+00:14:54.810 --> 00:15:03.280
+Another more direct, even potentially more
+direct, would be if. Let's move this up.
+
+288
+00:15:06.770 --> 00:15:13.630
+I could say if line is equal to empty
+string, continue.
+
+289
+00:15:14.690 --> 00:15:17.590
+So now what it says is, you know, if I'm
+getting a blank line,
+
+290
+00:15:17.590 --> 00:15:19.220
+I'm not even going to bother splitting it
+
+291
+00:15:19.220 --> 00:15:21.240
+because I know exactly what's going to
+happen.
+
+292
+00:15:21.240 --> 00:15:22.455
+So let's see if this works.
+
+293
+00:15:29.455 --> 00:15:31.560
+So this one works as well.
+
+294
+00:15:31.560 --> 00:15:37.310
+So now I've got, you know, a couple of
+codes, a couple of code paths through here.
+
+295
+00:15:39.030 --> 00:15:43.650
+Right? If, if the blank line, I do it after
+the strip to make sure it is really empty.
+
+296
+00:15:43.650 --> 00:15:47.060
+I skip blank lines this way. I come all
+the way down
+
+297
+00:15:47.060 --> 00:15:50.360
+and split and then skip lines that don't
+start with From this way.
+
+298
+00:15:50.360 --> 00:15:53.280
+And the only way I make it all the way
+down to here is if it is
+
+299
+00:15:53.280 --> 00:15:58.620
+a non-blank line and if the first word is
+a From, and then I do my thing.
+
+300
+00:15:58.620 --> 00:16:02.370
+So that basically is the notion of
+
+301
+00:16:05.230 --> 00:16:08.330
+the guardian pattern, and the pattern is
+simply,
+
+302
+00:16:11.340 --> 00:16:15.980
+if there is some code that might have a
+problem depending on perhaps user input,
+
+303
+00:16:15.980 --> 00:16:18.200
+put something in before it
+
+304
+00:16:18.200 --> 00:16:20.755
+that makes sure that you never get to the
+dangerous code.
+
+305
+00:16:20.755 --> 00:16:22.980
+And don't use a try/except for this.
+
+306
+00:16:22.980 --> 00:16:27.356
+That just would be tacky, tacky, tacky,
+tacky.
+
+307
+00:16:27.356 --> 00:16:32.600
+So that's the end of this this
+presentation.
+
+308
+00:16:32.600 --> 00:16:34.860
+So thanks a lot, and see you on the net.
